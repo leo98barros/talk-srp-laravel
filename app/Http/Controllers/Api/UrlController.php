@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Url;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\Url\StoreUrlRequest;
+use App\Http\Requests\Api\Url\UpdateUrlRequest;
 use App\Services\Url\UrlServiceContract;
-use Illuminate\Http\Request;
 
 class UrlController extends Controller
 {
-    private $service;
+    /** 
+     * @var UrlServiceContract
+     */
+    private UrlServiceContract $service;
+
     /**
      * UrlController Constructor
+     * 
+     * @param UrlServiceContract $service
      */
     public function __construct(UrlServiceContract $service)
     {
@@ -29,10 +35,11 @@ class UrlController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreUrlRequest $request)
     {
-        
-        $model = $this->service->create($request->all());
+        $data = $request->validated();
+
+        $model = $this->service->create($data);
 
         return response()->json($model);
     }
@@ -50,9 +57,13 @@ class UrlController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateUrlRequest $request, string $id)
     {
-        return response()->json(['update']);
+        $data = $request->validated();
+
+        $model = $this->service->update($id, $data);
+
+        return response()->json($model);
     }
 
     /**
