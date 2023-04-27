@@ -11,8 +11,7 @@
 
 First of all let's clone the project:
 ~~~
-git clone git@github.com:EnsinioOrg/ensinio-back-api.git
-git checkout develop
+git clone git@github.com:leo98barros/talk-srp-laravel.git
 ~~~
 
 With composer and PHP ^8.1 configured on your machine:
