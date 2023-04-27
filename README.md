@@ -38,11 +38,19 @@ The idea of ​​the project is to show how an example of folders would look if
 
 - MVC architecture:
 
+![Base Service   Repository Pattern-MVC drawio](https://user-images.githubusercontent.com/29790380/234854304-e0b862aa-82d2-49b3-aadb-6a7ead716428.png)
+
 - Service & Repository Pattern:
+
+![Base Service   Repository Pattern-Service   Repository Pattern drawio](https://user-images.githubusercontent.com/29790380/234854510-18badfa3-1062-43aa-98aa-8ced10f00878.png)
 
 - MVC + SRP (Service & Repository Pattern):
 
+![Base Service   Repository Pattern-MVC + SRP drawio](https://user-images.githubusercontent.com/29790380/234854348-8b434727-a138-455c-9d75-0caf9ef2edbf.png)
+
 - Folder layout:
+
+![Base Service   Repository Pattern-Esquema de pastas drawio](https://user-images.githubusercontent.com/29790380/234854379-bc4739d3-fa6b-4e79-b86f-5e9d0eb3d468.png)
 
 ### Api Documentation
 
